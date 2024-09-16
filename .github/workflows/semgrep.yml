@@ -20,7 +20,7 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package -f 'src/main/java/pom.xml'
       - name: Build Dependency Tree
-        run: mvn dependency:tree -DoutputFile=maven_dep_tree.txt  -f '/src/main/java/pom.xml'
+        run: mvn dependency:tree -DoutputFile=maven_dep_tree.txt  -f 'src/main/java/pom.xml'
       - name: Upload Dependency Tree Artifact
         uses: actions/upload-artifact@v3
         with:
